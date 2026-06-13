@@ -1,4 +1,4 @@
-##Tiny GPT with Mini Corpus
+#Tiny GPT with Mini Corpus
 
 Corpus Size : 2,282 words
 Domain      : Artificial Intelligence, Data Mining, NLP
