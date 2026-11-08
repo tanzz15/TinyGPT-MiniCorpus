@@ -1,51 +1,131 @@
 # Tiny GPT with Mini Corpus
 
-<p align="center">
-  A small-scale GPT experiment exploring language modeling and text generation using a mini text corpus.
-</p>
-
-<p align="center">
-  **Python · Natural Language Processing · Generative AI · GPT**
-</p>
-
----
+A small-scale GPT-style language model built using PyTorch to explore Natural Language Processing (NLP), tokenization techniques, and text generation.
 
 ## About the Project
 
-Tiny GPT with Mini Corpus is an experimental project focused on exploring the fundamental concepts of Generative AI through a small-scale GPT-style language model.
+Tiny GPT with Mini Corpus is an experimental Generative AI project that implements a simplified GPT architecture using a small text corpus.
 
-The project aims to understand how language models process text data, learn patterns from a corpus, and generate text based on learned language patterns.
+The project explores how different tokenization methods affect language modeling and text generation. It compares three SentencePiece tokenization approaches: Character, Byte Pair Encoding (BPE), and Unigram.
 
-By working with a mini corpus, this project provides an opportunity to explore the basic principles of language modeling and transformer-based architectures.
-
-## Project Objectives
-
-- Understand the fundamental concepts of GPT and language modeling.
-- Explore text preprocessing and corpus preparation.
-- Experiment with text generation using a small dataset.
-- Understand how AI models learn patterns from textual data.
-
-## Technologies & Concepts
+## Technologies & Tools
 
 - Python
+- PyTorch
+- SentencePiece
 - Natural Language Processing (NLP)
-- Generative Artificial Intelligence
-- GPT Architecture
-- Language Modeling
-- Text Processing
+- Transformer Architecture
+- Generative AI
 
-## Project Repository
+## Model Architecture
 
-Explore the source code and implementation:
+The model uses a simplified Transformer-based architecture consisting of:
 
-**[TinyGPT-MiniCorpus – GitHub Repository](https://github.com/tanzz15/TinyGPT-MiniCorpus)**
+- Token Embedding
+- Positional Embedding
+- Transformer Blocks
+- Layer Normalization
+- Linear Output Layer
+- Autoregressive Text Generation
+
+## Tokenization Methods
+
+This project compares three tokenization methods:
+
+| Method | Description |
+|---|---|
+| Character | Tokenizes text into individual characters |
+| BPE | Builds subword tokens by merging frequent character sequences |
+| Unigram | Uses a probabilistic subword tokenization approach |
+
+## Model Configuration
+
+| Parameter | Value |
+|---|---:|
+| Embedding Dimension | 32 |
+| Attention Heads | 2 |
+| Transformer Layers | 2 |
+| Block Size | 6 |
+| Learning Rate | 0.001 |
+| Training Epochs | 1,500 |
+| Batch Size | 16 |
+| Vocabulary Size Setting | 100 |
+
+## Project Structure
+
+```text
+TinyGPT-MiniCorpus/
+│
+├── 23.11.5638 Mini Corpus.pdf
+├── README.md
+├── corpus.txt
+├── tinygpt.py
+├── transformer_blocks.py
+│
+├── tokenizer.model
+├── tokenizer.vocab
+│
+├── tokenizer_char.model
+├── tokenizer_char.vocab
+│
+├── tokenizer_bpe.model
+├── tokenizer_bpe.vocab
+│
+├── tokenizer_unigram.model
+└── tokenizer_unigram.vocab
+```
+
+## How to Run
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/tanzz15/TinyGPT-MiniCorpus.git
+cd TinyGPT-MiniCorpus
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install torch sentencepiece
+```
+
+### 3. Run the Project
+
+```bash
+python tinygpt.py
+```
+
+Make sure `corpus.txt` and `transformer_blocks.py` are available in the project directory.
+
+## Training and Evaluation
+
+The project records:
+
+- Vocabulary size
+- Total token count
+- Training loss
+- Generated text
+
+The results are used to compare the behavior of the three tokenization methods during language model training.
+
+## Learning Objectives
+
+Through this project, I explored:
+
+- Fundamental concepts of GPT architecture.
+- Transformer-based language modeling.
+- Text preprocessing and tokenization.
+- Character and subword tokenization.
+- Deep Learning using PyTorch.
+- Basic Generative AI implementation.
 
 ## Developer
 
 **GitHub:** [@tanzz15](https://github.com/tanzz15)
 
-This project represents my exploration of Generative AI, language modeling, and the fundamental concepts behind GPT-based text generation.
+This project represents my exploration of Natural Language Processing, Transformer architecture, and Generative AI through a simplified GPT implementation.
 
 ---
 
-*Developed as an experimental Artificial Intelligence project.*
+*Developed as an experimental Generative AI project.*
